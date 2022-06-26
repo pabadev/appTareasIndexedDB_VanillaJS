@@ -1,0 +1,310 @@
+@font-face {
+    font-family: 'material_fuente_2';
+    src: url('../font/material_fuente_2.eot?19608380');
+    src: url('../font/material_fuente_2.eot?19608380#iefix') format('embedded-opentype'),
+         url('../font/material_fuente_2.woff2?19608380') format('woff2'),
+         url('../font/material_fuente_2.woff?19608380') format('woff'),
+         url('../font/material_fuente_2.ttf?19608380') format('truetype'),
+         url('../font/material_fuente_2.svg?19608380#material_fuente_2') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "material_fuente_2";
+    font-style: normal;
+    font-weight: normal;
+    /*speak: never;*/
+  
+    display: inline;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    
+    height: 1rem;
+    margin-right: 0.1em;
+    text-align: center;
+    /* opacity: .8; */
+  
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+  
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+  
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: 0;
+  
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+  
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  }
+  
+.icon-menu:before { content: '\e800'; } /* '' */
+.icon-close:before { content: '\e807'; } /* '' */
+.icon-cog:before { content: '\e808'; } /* '' */
+.icon-cog-outline:before { content: '\e809'; } /* '' */
+.icon-exit-to-app:before { content: '\e80a'; } /* '' */
+.icon-logout:before { content: '\e80f'; } /* '' */
+.icon-pencil-outline:before { content: '\e810'; } /* '' */
+.icon-plus:before { content: '\e811'; } /* '' */
+.icon-trash-can-outline:before { content: '\e815'; } /* '' */
+.icon-view-dashboard:before { content: '\e816'; } /* '' */
+
+:root {
+    --lightgray: #efefef;
+    --blue: steelblue;
+    --white: #fff;
+    --black: rgba(0, 0, 0, 0.8);
+    --bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
+  }
+
+html, body{
+    font-family: sans-serif;
+    background-color: #313030;
+}
+
+.container{
+    padding: 2px;
+    padding-top: 10px;
+    max-width: 804px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 100%;
+}
+
+.cajaForm{
+    padding-right: 4px;
+}
+
+table{
+    margin-top: 25px;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+thead{
+    height: 60px;
+    font-size: larger;
+    background-color: #2c2c88;
+    color: white;
+}
+
+thead th:nth-child(1) {
+    width: 75%;
+    border-top-left-radius: 10px;
+    }
+    thead th:nth-child(2) {
+    width: 25%;
+    border-top-right-radius: 10px;
+    }
+
+td{
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    height: 30px;
+    text-align: justify;
+    font-size: 0.9rem;
+    cursor:pointer;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #cdd1f5;
+    color:#2c2c88;
+    text-shadow: 0px 0px 0px #04285a;
+    }
+
+tbody tr:nth-child(even) {
+    
+    color: white;
+    text-shadow: 0px 0px 0px #202020;
+    background-color: #5d5d9e;
+    }
+
+.completada {
+    text-decoration: line-through; 
+    font-style: italic;   
+}
+
+tbody tr:nth-child(odd).completada1{
+    background-color: #995656;
+    color: #f0c5a2;
+}
+
+tbody tr:nth-child(even).completada1{
+    background-color: #8a4747;
+    color: #f0c5a2;
+}
+
+.btnFilas{
+    min-width: 50px;
+    border-left: 0.05px dotted #a3a2a2;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 1.4rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btnFilas:hover{
+    background-color: #a8c1f7;
+}
+
+.formTarea{
+    display: flex;
+    align-items: stretch;
+    width: 70%;
+    height: 40px;
+    padding-right: 0;
+    border: 2px solid #cdd1f5;
+    border-radius: 10px;
+    background-color: #2c2c88;    
+    margin: auto;
+}
+
+.txtTarea{
+    float: left;
+    width: 100%;
+    height: 40px;
+    background: none;
+    outline: 0;
+    border: none;
+    padding-left: 10px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.btnEnviar{
+    /* position: flex;
+    right: 0; */
+    float: right;
+    cursor: pointer;
+    outline: none;    
+    border: none;
+    border-radius: 0px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    width: 120px;
+    height: inherit;
+    background-color: #cdd1f5;
+    color: #2c2c88;
+    font-weight: 800;
+    /* margin-right: -10; */
+}
+
+.btnEnviar:hover{
+    background-color: #6c6cc7;
+    color: white;
+}
+
+/* estilo para modal deeditar */
+
+.modal { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--black);
+  }
+
+  .modal-dialog {
+    position: relative;
+    width: 780px;
+    max-height: 200px;
+    border-radius: 7px;
+    background-color: var(--blue);
+    cursor: default;
+  }
+
+  .modal-dialog > * {
+    padding: 2rem;
+    padding-left: 4px;
+    padding-right: 9px;
+  }
+   
+  .modal-header {
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    background: var(--lightgray);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+   
+  .modal-header .modal-close {
+    font-size: 1.5rem;
+    padding: 1px;
+    /* padding-right: 15px; */
+  }
+   
+  .modal p + p {
+    margin-top: 1rem;
+  }
+
+  #formEditar {
+    width: 100%;
+  }
+
+.close-modal{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: inherit;
+  }
+
+ .isVisible {
+  transition: all 5s ease-in;
+    visibility: visible;
+    opacity: 1;
+
+  }
+  .noVisible {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in;
+  }
+
+@media (max-width: 768px) {
+    .container, .modal-dialog {
+    width: 90%;
+    }
+    .formTarea{
+        width: 80%;
+    }
+    }
+
+@media (max-width: 480px) {
+    .container, .modal-dialog {
+    padding: 0;
+    padding-top: 10px;
+    width: 100%;
+    }
+    .modal-dialog {
+        padding: 0;
+        width: 100%;
+        }
+    .formTarea{
+        width: 100%;
+    }
+    }
