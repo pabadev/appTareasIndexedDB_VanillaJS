@@ -56,7 +56,7 @@ function agregarTarea() {
 
 function mostrar() {
     document.getElementById("txtTarea").value = "";
-    document.getElementById("txtTarea").focus(focus);
+    // document.getElementById("txtTarea").focus(focus);
     cuerpoTablaHTML="";
     cuerpoTabla.innerHTML="";
     var transaccion = bd.transaction(["tabTareas"]);
@@ -119,7 +119,7 @@ function showModal(id1, clase1){
     <div class='modal-dialog'>\n\
         <header class='modal-header'>\n\
           <h3>Editar tarea</h3>\n\
-          <button  onclick='cerrarModal()' class='close-modal' id='btnClose'>X</button>\n\
+          <button  onclick='cerrarModal()' class='close-modal' id='btnClose'><span class='icon-close'></span></button>\n\
         </header>\n\
         <section class='modal-content'>\n\
           <form name='formEditar' class='formTarea' id='formEditar'>\n\
